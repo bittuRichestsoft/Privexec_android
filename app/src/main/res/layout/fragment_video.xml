@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragmnet.VideoFragment">
+
+    <data>
+
+        <variable
+                name="user"
+                type="com.privexec.viewmodel.DsarVM" />
+    </data>
+
+
+    <FrameLayout
+            android:id="@+id/fl_videoFrag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include layout="@layout/header" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/tootbar"
+                android:layout_marginBottom="@dimen/tootbar"
+                android:background="@color/light_navy_blue">
+
+            <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/dsarbutton"
+                    android:layout_below="@+id/tool_myapp"
+                    android:layout_marginTop="10dp">
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="5dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/light_navy_blue"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:id="@+id/video_discraption"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <VideoView
+                                    android:id="@+id/video"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="fitXY" />
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/introducing"
+                                        android:tint="@color/white" />
+
+                                <TextView
+                                        android:id="@+id/tv_videoBottomTitleTxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Alaska Airline, Inc."
+                                        android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <TextView
+                                    android:id="@+id/discraption"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|left"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center|left"
+                                    android:text=""
+                                    android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <Button
+                    android:id="@+id/dsarbutton"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/buttion_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/button_gradient"
+                    android:gravity="center"
+                    android:text="E-mail"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/bottom_banner" />
+    </FrameLayout>
+
+</layout>

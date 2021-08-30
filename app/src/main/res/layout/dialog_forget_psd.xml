@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/background_color"
+        android:minWidth="300dp"
+        android:padding="@dimen/_12sdp"
+        android:minHeight="200dp"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/iv_closeDialog"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="match_parent"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_close"
+                android:tint="@color/white" />
+
+        <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                  android:text="Forget Passowrd ?"
+          android:gravity="center"
+               android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+    </FrameLayout>
+
+    <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_hight"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_inputfiled"
+            android:hint="Enter Email"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_10sdp"
+            android:backgroundTint="@color/white"
+            android:paddingRight="@dimen/_10sdp"></EditText>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackground"
+                 android:text="@string/continue_"
+                android:textStyle="bold"
+                android:textColor="@color/background_color"
+                android:textSize="14sp"
+                tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

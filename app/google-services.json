@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "892605101741",
+    "project_id": "privexec-3abc5",
+    "storage_bucket": "privexec-3abc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892605101741:android:e7e47961dfe136adcc3824",
+        "android_client_info": {
+          "package_name": "com.privexec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892605101741-plk5kukuf78oolsp43f48di0hhn29pbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.privexec",
+            "certificate_hash": "9e26d70d417daba354753de7220370c0dcd9ec53"
+          }
+        },
+        {
+          "client_id": "892605101741-flggsq47e48lvbj0qbbktkmrvnfp4enq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFZ7kaaCNQe5Wf4s-NaxSnuaEQu-45r1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892605101741-flggsq47e48lvbj0qbbktkmrvnfp4enq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892605101741-7rhmf0qt0nvid6ms6i7nq4p1p10j49e3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.richestsoft.privexec"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

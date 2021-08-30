@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragmnet.Tutroial">
+
+    <data>
+        <variable
+                name="user"
+                type="com.privexec.viewmodel.PrivacyRatingVM" />
+    </data>
+
+    <FrameLayout
+            android:id="@+id/fl_fragPrivacyRating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <include layout="@layout/header" />
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/tootbar"
+                android:layout_marginBottom="@dimen/tootbar"
+                android:background="@color/white"
+                android:clickable="true">
+
+            <TextView
+                    android:id="@+id/tool_myapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/privacyrating"
+                    android:textColor="@color/background_color"
+                    android:textSize="@dimen/toolbartextsize"
+                    android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tool_myapp"
+                    app:cardCornerRadius="1dp"
+                    app:cardElevation="5dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/privacyrating"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+android:visibility="gone"
+                    android:id="@+id/swp_refLyt">
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <include layout="@layout/bottom_banner" />
+    </FrameLayout>
+</layout>

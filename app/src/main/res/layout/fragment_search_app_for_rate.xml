@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragmnet.Tutroial">
+
+    <data>
+
+        <variable
+                name="user"
+                type="com.privexec.viewmodel.PrivacyRatingVM" />
+    </data>
+
+    <FrameLayout
+            android:id="@+id/fl_fragSearchApp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include layout="@layout/header" />
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/tootbar"
+                android:layout_marginBottom="@dimen/tootbar"
+                android:background="@color/white"
+                android:clickable="true">
+
+            <LinearLayout
+                    android:id="@+id/ll_seachView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+               android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/light_navy_blue"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+
+                <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="80"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="Search apps..."
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_3sdp"
+
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/light_navy_blue"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+
+                <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="20"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="8dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_search" />
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:id="@+id/tool_myapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/ll_seachView"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/privacyrating"
+                    android:textColor="@color/background_color"
+                    android:textSize="@dimen/toolbartextsize"
+                    android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tool_myapp"
+                    app:cardCornerRadius="1dp"
+                    app:cardElevation="5dp">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swp_refLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_search_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <include layout="@layout/bottom_banner" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#10E119</color>
+    <color name="redColor">#F44336</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="light_navy_blue">#44546b</color>
+    <color name="home_tiles_color">#d9d9d9</color>
+    <!--d9d9d9-->
+    <color name="background_color">#44546b</color>
+    <color name="input_color_code">#f1f1f1</color>
+    <color name="divider">#ededed</color>
+    <color name="dark_blue_button_color">#142a48</color>
+
+    <color name="orange">#F85826</color>
+    <color name="pink">#0866f3</color>
+    <color name="grey">#d7d7d7</color>
+    <color name="grey_white">#BCBCBC</color>
+    <color name="greySignIn">#B5B4B4</color>
+    <color name="blue">#1e6ed1</color>
+    <color name="blue_graph">#1e6ed1</color>
+    <color name="bg_color">#e3ebee</color>
+    <color name="yellow">#FFC107</color>
+
+</resources>

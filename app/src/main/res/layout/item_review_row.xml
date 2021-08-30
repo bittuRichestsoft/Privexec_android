@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_app"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:src="@drawable/whatsappp_icon"
+                android:visibility="gone" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/margin_leftright"
+                android:layout_marginRight="@dimen/margin_leftright"
+                android:layout_toRightOf="@+id/image_app"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/app_tital"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jasvir Singh"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        ads:srb_drawableEmpty="@drawable/star_blank"
+                        ads:srb_drawableFilled="@drawable/star_fully"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="false"
+                        app:srb_isIndicator="false"
+                        app:srb_scrollable="false"
+                        app:srb_starHeight="10dp"
+                        app:srb_starPadding="1dp"
+                        app:srb_starWidth="10dp"
+                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/app_dicraption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="The best way to do this is to set the drawable for the thumb from XML (as I was doing all along) and then when you want to hide/show the Thumb drawable, just manipulate it's alpha value:"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/ll_itemDsarQues"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tv_dsarQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/question"
+                android:paddingRight="10dp"
+                android:text="@string/name_of_the_person" />
+
+        <EditText
+                android:id="@+id/et_dsarAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_editmargintop"
+                android:background="@drawable/dsar_editbackground"
+                android:inputType="text"
+                android:maxLines="10"
+                android:minHeight="@dimen/d_edithight"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+        <TextView
+                android:id="@+id/tv_dsarQueOptionalOrNot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This field is required"
+                android:textColor="@color/redColor"
+                android:textSize="8dp"
+                android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/background_color"
+
+>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+android:weightSum="100"
+        ><ImageView
+        android:id="@+id/img_headerback"
+        android:layout_width="0dp"
+            android:layout_weight="8"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+         android:foreground="?attr/selectableItemBackground"
+    android:tint="@color/white"
+            android:rotation="180"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
+         />
+
+
+    <TextView
+        android:id="@+id/tv_headerTitle"
+            android:layout_width="0dp"
+            android:layout_weight="80"
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:text="Header"
+        android:layout_gravity="center"
+            android:gravity="center"
+        android:textColor="@color/white"
+android:textStyle="bold"
+        android:textSize="18dp"/>
+
+
+    <ImageView
+        android:id="@+id/iv_question"
+        android:layout_width="0dp"
+android:layout_weight="10"
+        android:layout_height="50dp"
+         android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+     android:visibility="gone"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/question"/>
+
+</LinearLayout>
+
+<TextView
+   android:id="@+id/tv_sendEmail"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+    android:text="SEND"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+     android:layout_gravity="right"
+        android:textAlignment="center"
+        android:gravity="center"
+ android:layout_marginRight="5dp"
+         android:textSize="20dp"
+        />
+
+</FrameLayout>

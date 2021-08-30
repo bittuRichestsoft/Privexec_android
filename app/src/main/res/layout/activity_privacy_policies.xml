@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:orientation="vertical"
+android:weightSum="100"
+        tools:context=".activity.WebViewDataActivity">
+<include
+    layout="@layout/header"/>
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:layout_marginBottom="@dimen/tootbar"
+    >
+        <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <WebView
+                    android:id="@+id/about_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </WebView>
+
+            <ProgressBar
+                    android:layout_centerVertical="true"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:layout_marginTop="100dp" />
+
+
+        </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+    <include
+            layout="@layout/bottom_banner"/>
+</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.privexec.viewmodel.MyAppVM" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fl_fragMyappDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tootbar"
+            android:layout_marginBottom="@dimen/tootbar"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_80sdp"
+                    android:background="@color/light_navy_blue"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tool_myapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="@string/myapp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/toolbartextsize"
+                        android:visibility="gone" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tool_myapp"
+                        android:paddingTop="10dp"
+                        app:cardBackgroundColor="@color/light_navy_blue"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:padding="5dp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_gift"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/app_image"
+                                        android:layout_width="@dimen/_30sdp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="left|center"
+                                        android:padding="5dp"
+                                        android:src="@drawable/whatsappp_icon" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/app_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toLeftOf="@+id/iv_deleteApp"
+                                    android:layout_toRightOf="@+id/ll_gift"
+                                    android:gravity="center|left"
+                                    android:text="Whats app"
+                                    android:textColor="@color/background_color"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/iv_deleteApp"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="@dimen/_5sdp"
+                                    android:src="@drawable/delete_icon"
+                                    android:visibility="gone" />
+
+                                <Switch
+                                    android:id="@+id/swichbuttion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:drawableTint="@color/background_color"
+                                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+
+                                    android:thumbTint="@color/background_color"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Installed Date : "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_11sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/install_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:text="01.09.2019"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginRight="15dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Last Used Date : "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_11sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/last_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:text="01.09.2019"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_privacyPolicy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="@dimen/_15sdp"
+                                android:text="@string/privacy_policy"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_app_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="App Category : "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_11sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:text="Not Available"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Potentially Personal Data Types Collected : "
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_11sdp"
+                                        android:textStyle="bold" />
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/_15sdp">
+
+                                        <ImageView
+                                            android:id="@+id/iv_plusPersonalData"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/ic_arrow_next"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_minusPersonalData"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:rotation="90"
+                                            android:src="@drawable/ic_arrow_next" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <androidx.core.widget.NestedScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_personalDataShared"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Not Available "
+                                        android:textColor="@color/white"
+                                        android:textSize="14dp" />
+                                </androidx.core.widget.NestedScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d_margintop"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="15dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Device Permissions Granted : "
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_11sdp"
+                                        android:textStyle="bold" />
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/_15sdp">
+
+                                        <ImageView
+                                            android:id="@+id/iv_plusPermission"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/ic_arrow_next"
+                                            android:visibility="gone"
+
+                                            />
+
+                                        <ImageView
+                                            android:id="@+id/iv_minusPermission"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:rotation="90"
+                                            android:src="@drawable/ic_arrow_next" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <androidx.core.widget.NestedScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_permissionInfo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Not Available "
+                                        android:textColor="@color/white"
+                                        android:textSize="14dp" />
+                                </androidx.core.widget.NestedScrollView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/background_color"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/dsarbutton"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/buttion_size"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_gradient"
+                        android:gravity="center"
+                        android:text="@string/dsar"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                  android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/data_subject"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/bottom_banner" />
+    </FrameLayout>
+</layout>

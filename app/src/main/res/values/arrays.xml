@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="usage_stats_display_order_types">
+        <item>Usage time</item>
+        <item>Last time used</item>
+        <item>App name</item>
+    </string-array>
+
+    <string-array name="static_packages">
+        <item name="0">com.android.chrome</item>
+        <item name="1">com.google.android.music</item>
+        <item name="2">com.google.android.apps.photos</item>
+        <item name="3">com.google.android.youtube</item>
+        <item name="4">com.google.android.apps.maps</item>
+        <!--<item name="5">com.google.android.webview</item>-->
+        <item name="6">com.google.android.gm</item>
+        <item name="7">com.google.android.apps.docs</item>
+        <item name="8">com.google.android.apps.tachyon</item>
+        <item name="9">com.google.android.googlequicksearchbox</item>
+        <item name="10">com.skype.raider</item>
+        <item name="11">com.microsoft.skydrive</item>
+        <item name="12">com.tmobile.pr.mytmobile</item>
+
+    </string-array>
+
+</resources>

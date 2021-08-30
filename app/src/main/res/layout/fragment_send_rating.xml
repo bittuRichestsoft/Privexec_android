@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragmnet.SendRating">
+
+    <data>
+
+        <variable
+                name="user"
+                type="com.privexec.viewmodel.RatingDetailVM" />
+    </data>
+<FrameLayout
+   android:id="@+id/fl_fragSendRating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_navy_blue"
+>
+    <include
+            layout="@layout/header"/>
+<LinearLayout
+        android:layout_width="match_parent"
+   android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/tootbar"
+        android:layout_marginTop="@dimen/tootbar" >
+    <LinearLayout
+            android:id="@+id/layoutview"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@color/white"
+            android:gravity="center">
+
+        <ImageView
+                android:id="@+id/appimage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:src="@drawable/whatsappp_icon" />
+
+        <TextView
+                android:id="@+id/app_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/img_arrowRight"
+                android:layout_toRightOf="@+id/ll_gift"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:textColor="@color/black"
+                android:text="Whats app" />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left">
+
+
+            <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratingbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center|right"
+                    ads:srb_drawableEmpty="@drawable/star_blank"
+                    ads:srb_drawableFilled="@drawable/star_fully"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="false"
+                    app:srb_isIndicator="false"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="15dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="15dp"
+                    app:srb_stepSize="0.5"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+            <TextView
+                    android:id="@+id/tool_myapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/privacyrating"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/toolbartextsize"
+                    android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tool_myapp"
+                    ads:cardBackgroundColor="@color/light_navy_blue"
+                    app:cardCornerRadius="1dp"
+                    app:cardElevation="5dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/margin_leftright"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/rate_and_review"
+                                android:textColor="@color/white" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d_margintop"
+                                android:paddingRight="10dp"
+                                android:text="@string/collect_form_me"
+                                android:textColor="@color/white" />
+
+                        <com.willy.ratingbar.ScaleRatingBar
+                                android:id="@+id/rating1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                ads:srb_drawableEmpty="@drawable/star_blank"
+                                ads:srb_drawableFilled="@drawable/star_fully"
+                                app:srb_clearRatingEnabled="true"
+                                app:srb_clickable="true"
+                                app:srb_isIndicator="false"
+                                app:srb_scrollable="true"
+                                app:srb_starHeight="25dp"
+                                app:srb_starPadding="1dp"
+                                app:srb_starWidth="25dp"
+                                app:srb_stepSize="1"></com.willy.ratingbar.ScaleRatingBar>
+
+                        <!--  <View
+                                  android:layout_width="match_parent"
+                                  android:layout_height="1dp"
+                                  android:layout_below="@+id/layoutview"
+                                  android:layout_marginTop="5dp"
+                                  android:background="@color/home_tiles_color" />
+  -->
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d_margintop"
+                                android:paddingRight="10dp"
+                                android:text="@string/communication_ornewsletter"
+                                android:textColor="@color/white" />
+
+                        <com.willy.ratingbar.ScaleRatingBar
+                                android:id="@+id/rating2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                ads:srb_drawableEmpty="@drawable/star_blank"
+                                ads:srb_drawableFilled="@drawable/star_fully"
+                                app:srb_clearRatingEnabled="true"
+                                app:srb_clickable="true"
+                                app:srb_isIndicator="false"
+                                app:srb_scrollable="true"
+                                app:srb_starHeight="25dp"
+                                app:srb_starPadding="1dp"
+                                app:srb_starWidth="25dp"
+                                app:srb_stepSize="1"></com.willy.ratingbar.ScaleRatingBar>
+
+                        <!--<View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/layoutview"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/home_tiles_color" />
+-->
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d_margintop"
+                                android:paddingRight="10dp"
+                                android:text="@string/service_provider"
+                                android:textColor="@color/white" />
+
+                        <com.willy.ratingbar.ScaleRatingBar
+                                android:id="@+id/rating3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                ads:srb_drawableEmpty="@drawable/star_blank"
+                                ads:srb_drawableFilled="@drawable/star_fully"
+                                app:srb_clearRatingEnabled="true"
+                                app:srb_clickable="true"
+                                app:srb_isIndicator="false"
+                                app:srb_scrollable="true"
+                                app:srb_starHeight="25dp"
+                                app:srb_starPadding="1dp"
+                                app:srb_starWidth="25dp"
+                                app:srb_stepSize="1"/>
+
+                        <!--                     <View
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="1dp"
+                                                     android:layout_below="@+id/layoutview"
+                                                     android:layout_marginTop="5dp"
+                                                     android:background="@color/home_tiles_color" />
+                     -->
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d_margintop"
+                                android:paddingRight="10dp"
+                                android:text="@string/your_experience"
+                                android:textColor="@color/white" />
+
+                        <EditText
+                                android:id="@+id/comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d_editmargintop"
+                                android:background="@color/white"
+                                android:gravity="top"
+                                android:inputType="text"
+                               android:maxLines="6"
+                                android:hint="Enter your review"
+                                android:padding="@dimen/_10sdp"
+                                android:minHeight="@dimen/_70sdp"
+                                android:textColor="@color/background_color" />
+
+
+
+                        <Button
+                                android:id="@+id/tv_continueOnFilledRate"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/buttion_size"
+                                android:layout_gravity="center"
+                       android:visibility="visible"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:background="@drawable/button_gradient"
+                                android:text="Confirm"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+                        <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/videoBtn_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_200sdp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/light_navy_blue"
+                                android:orientation="vertical">
+                            <TextView
+                                    android:textSize="12dp"
+                                    android:gravity="center"
+                                    android:layout_marginTop="@dimen/d_margintop"
+                                    android:textColor="@color/white"
+                                    android:padding="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/before_you"/>
+                            <Switch
+                                    android:checked="false"
+                                    android:id="@+id/swich_button"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+<include
+    layout="@layout/bottom_banner"/>
+</FrameLayout>
+</layout>

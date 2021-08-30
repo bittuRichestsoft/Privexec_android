@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragmnet.Preferences">
+
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+ >
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/tootbar"
+            android:layout_height="match_parent"
+            android:background="@color/dark_blue_button_color"
+            android:clickable="false">
+
+        <TextView
+                android:id="@+id/tool_myapp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:text="@string/prefrence"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbartextsize" />
+       <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+        android:background="@color/white"
+                    android:layout_below="@+id/tool_myapp"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pushapp"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/light_navy_blue"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/home_tiles_color" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/country"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="@string/unitedstates"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:visibility="gone" />
+
+                    <Spinner
+                            android:id="@+id/spinner_country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|right"
+                            android:text="@string/unitedstates"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/home_tiles_color" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="@string/sixmonth"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:gravity="center|right"
+                            android:text="6 Month"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/home_tiles_color" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="@string/savedsar"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColor="@color/light_navy_blue"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/home_tiles_color" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="@string/changepassword"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:gravity="center|right"
+                            android:text="6 Month"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/home_tiles_color" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_hight"
+                        android:layout_marginLeft="@dimen/d_margintop"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="@string/enabletouchid"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColor="@color/light_navy_blue"
+                            android:textSize="14dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+    </RelativeLayout>
+    <include
+            layout="@layout/bottom_banner"
+            />
+</FrameLayout>
+</layout>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragmnet.ReportsFragment">
+
+
+    <FrameLayout
+        android:id="@+id/fl_fragReports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tootbar"
+            android:layout_marginBottom="@dimen/tootbar"
+            android:fillViewport="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tool_myapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/reports"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/toolbartextsize"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tool_myapp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="1dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/layout_hight"
+                            android:layout_marginLeft="@dimen/d_margintop"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_apps_installed"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/d_margintop"
+                            android:layout_marginRight="15dp"
+                            android:orientation="vertical">
+                             <FrameLayout
+                                android:id="@+id/speedVwframe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <com.github.anastr.speedviewlib.SpeedView
+                                    android:id="@+id/speedView_chartCircle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_200sdp"
+                                    android:layout_gravity="center"
+                                    app:centerCircleColor="@color/blue"
+                                    app:highSpeedColor="@color/redColor"
+
+                                    app:indicatorColor="@color/background_color"
+                                    app:maxSpeed="20"
+                                    app:mediumSpeedColor="@color/orange"
+                                    app:speedometerWidth="@dimen/_30sdp"
+                                    app:textColor="@color/white"
+                                    app:withTremble="true" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@color/background_color"
+                                        android:textSize="@dimen/_15sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_maxAppsSpeedVw"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="20"
+                                        android:textColor="@color/background_color"
+                                        android:textSize="@dimen/_15sdp" />
+
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvPiiSharedbyApp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/speedVwframe"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:text="@string/pii_shared_by_app"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/barChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_below="@id/tvPiiSharedbyApp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvPiiChart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/barChart"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:text="@string/type_of_pii_shared"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+
+                            <lecho.lib.hellocharts.view.PieChartView
+                                android:id="@+id/circularPiechart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_250sdp"
+                                android:layout_below="@+id/tvPiiChart"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_allCharts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/circularPiechart"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvTrendAppsActive"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/trend_app_active_vs_pii_shared"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/black" />
+
+                                <com.github.mikephil.charting.charts.LineChart
+                                    android:id="@+id/lineChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_below="@id/tvTrendAppsActive"
+                                    android:layout_marginTop="8dp" />
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/pieChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_150sdp"
+                                    android:layout_below="@id/lineChart"
+                                    android:layout_marginTop="8dp" />
+
+                                <com.imanoweb.calendarview.CustomCalendarView
+                                    android:id="@+id/calendar_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/pieChart"
+                                    app:calendarTitleTextColor="@color/black"
+                                    app:currentDayOfMonthColor="@color/blue"
+                                    app:dayOfMonthTextColor="@color/black"
+                                    app:dayOfWeekTextColor="@color/black"
+                                    app:disabledDayTextColor="@color/grey"
+                                    app:selectedDayBackgroundColor="@color/blue"
+                                    app:titleLayoutBackgroundColor="@color/white"
+                                    app:weekLayoutBackgroundColor="@color/white"></com.imanoweb.calendarview.CustomCalendarView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/originalChartReportByCat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_allCharts"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Apps by Category"
+                                    android:textColor="@color/background_color"
+                                    android:textSize="@dimen/_20sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    />
+
+                                <me.ithebk.barchart.BarChart
+                                    android:id="@+id/appsByCat_barChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bar_text_size="@dimen/_8sdp"
+                                    app:bar_type="horizontal"
+                                    app:bar_width="@dimen/_15sdp" />
+
+                                <lecho.lib.hellocharts.view.PieChartView
+                                    android:id="@+id/appsByCat_PieChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_250sdp"
+                                    android:visibility="gone" />
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_appCatWithColor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_TimebasedApps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/originalChartReportByCat"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Total Apps Installed vs. Last Used Date "
+                                    android:textColor="@color/background_color"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:textSize="@dimen/_20sdp" />
+
+                                <lecho.lib.hellocharts.view.PieChartView
+                                    android:id="@+id/appsTimeBaseApps"
+                        android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_250sdp" />
+
+                                <TextView
+                           android:visibility="gone"
+                                    android:id="@+id/tv_usedTmBasedAppsCount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total " />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:background="@color/colorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/tv_usedInLastMonth"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:text="Used in the last month" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:background="@color/yellow" />
+
+                                        <TextView
+                                            android:id="@+id/tv_usedInLast_6_Months"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:text="Used in the last 6 months" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:background="@color/redColor" />
+
+                                        <TextView
+                                            android:id="@+id/tv_notUsedInLast_6_Months"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:text="Not used within the last 6 months" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_personalPotentialData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_TimebasedApps"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Potentially Personal Data Types Collected"
+                                    android:textColor="@color/background_color"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:textSize="@dimen/_20sdp" />
+
+                                <me.ithebk.barchart.BarChart
+                                    android:id="@+id/appsPersonalPotentialData"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bar_text_size="@dimen/_8sdp"
+                                    app:bar_type="horizontal"
+                                    app:bar_width="@dimen/_15sdp" />
+
+                                <TextView
+                                    android:id="@+id/tv_potentialDataNotFound"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:gravity="center"
+                                    android:text="No Data Found"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_30sdp" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/bottom_banner" />
+
+    </FrameLayout>
+</layout>
